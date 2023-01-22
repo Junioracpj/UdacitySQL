@@ -115,7 +115,7 @@ FROM tab1;
 /*
 Use COALESCE to fill in each of the qty and usd columns with 0 for the table in
 */
-SELECT COALESCE(o.id, a.id) filled_id, a.*, o.*
+SELECT COALESCE(o.id, a.id) filled_id, a.*, ito.*
 FROM accounts a
 LEFT JOIN orders o
 ON a.id = o.account_id
